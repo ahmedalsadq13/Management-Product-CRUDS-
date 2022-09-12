@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+</head>
+<body>
+    <div id="crud" class="crud ">
+        <div class="container flex flex-column">
+
+            <div class="head text-center mb-2">
+                <h1>cruds</h1>          
+                <p>product management system</p>  
+            </div>
+    
+            <div class="form">
+                <div class="inputs">
+                    <input class="form-control" type="text" id="title" placeholder = "title">
+                    <div class="price flex align-center">
+                        <input onkeyup="getTotal()" class="form-control" type="number" id="price" placeholder="price">
+                        <input onkeyup="getTotal()" class="form-control" type="number" id="taxes" placeholder="taxes">
+                        <input onkeyup="getTotal()" class="form-control" type="number" id="ads" placeholder="ads">
+                        <input onkeyup="getTotal()" class="form-control" type="number" id="discount" placeholder="discount">
+                        <small id="total"></small>
+                    </div>
+                    <div class="counting">
+                        <input class="form-control" type="number" id="count" placeholder="count">
+                        <input class="form-control" type="text" id="category" placeholder="category">
+                        <button class="btn blue" type="submit" id="submit">Create</button>
+                    </div>
+                </div>
+    
+                <div class="outputs">
+                    <div class="searchblock">
+                        <input class="form-control" type="search" id="search" placeholder="search" onkeyup="searchData(this.value)">
+                        <div class="btnSearch">
+                            <button class="btn red" id="searchTitle" onclick = "getSearchMood(this.id)">Search by title</button>
+                            <div id="deleteAll"></div>
+                            <button class="btn red" id="searchCategory" onclick = "getSearchMood(this.id)">Search by Category</button>
+                        </div>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>title</th>
+                                    <th>price</th>
+                                    <th>taxes</th>
+                                    <th>ads</th>
+                                    <th>discount</th>
+                                    <th>total</th>
+                                    <th>category</th>
+                                    <th>update</th>
+                                    <th>delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">                                                        
+                            </tbody>
+                        </table>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/typescript.js" type="module"></script>
+</body>
+</html>

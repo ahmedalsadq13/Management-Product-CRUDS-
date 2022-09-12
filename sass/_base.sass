@@ -1,0 +1,143 @@
+:root
+    background-color: $beige-light
+    font-size: 62.5%
+
+*
+    box-sizing: border-box
+    font-family: Arial, Helvetica, sans-serif
+    margin: 0
+    padding: 0
+    color: #333
+
+h1,
+h2,
+h3,
+h4
+    margin-bottom: 1rem
+
+
+h1
+    font-size: 5.4rem
+    color: $red
+    margin-bottom: 5rem
+    text-transform: uppercase
+
+h1 > span
+    font-size: 2.4rem
+    font-weight: 500   
+h2 
+    font-size: 4.5rem
+    margin-bottom: 4rem
+    font-weight: 700
+
+h3
+    font-size: 2.8rem
+    font-weight: 500     
+    
+
+/* Utilities */ 
+
+.form-control
+        margin-bottom: 1rem    
+        height: 5.5rem
+        padding: 1.5rem
+        font-size: 1.8rem
+        border: none
+        box-shadow: 0 0 30px rgb(17 17 17/ 8%)  
+        outline: none
+        @extend .focus-effect
+        &::placeholder
+            color:#ccc
+
+.focus-effect     
+    background-position: center center
+    transition: .4s
+    &:focus
+        background-color: rgb(255 168 22 / 72%)
+        caret-color: #FFF
+        color: #FFF
+        &::-webkit-input-placeholder
+            color: #fff
+            text-transform: capitalize
+
+            
+.hover-effects
+    cursor: pointer
+    box-shadow: 0 0.4rem 1.4rem rgb(163 163 163 / 50%)
+    transform: translateY(-0.1rem)
+    transition: transform 0.2s
+
+.container
+    display: flex
+    width: 80vw
+    height: 100vh
+    margin: 0 auto
+    min-height: 80rem
+    padding: 2rem
+    font-size: 2rem
+
+.container > *
+    width: 100%
+.flex
+    display: flex
+.flex-column
+    display: flex
+    flex-direction: column
+
+.align-center 
+    align-items: center
+
+.justify-center
+    justify-content: center 
+.justify-between
+    justify-content: space-between
+.text-center
+    text-align: center
+
+.hidden
+    display: none
+
+.my-2
+    margin-block: 2rem    
+.mt-2
+    margin-top: 2rem    
+.mb-2
+    margin-bottom: 2rem
+
+/* Buttons  */
+
+.btn
+    text-decoration: none
+    color: $blue
+    border: 0.1rem solid $blue
+    width: 20rem
+    padding: 1.5rem 0
+    font-size: 1.8rem
+    text-align: center
+    margin-bottom: 1rem
+    background-color: white
+    border: none
+    transition: all 0.4s
+        
+    &:hover
+        @extend .hover-effects
+    &:disabled:hover
+        cursor: not-allowed
+        box-shadow: none
+        transform: none
+    
+/* COLOR */
+.blue
+    background-color: $blue
+    color: white
+.red
+    background-color: $red
+    color: white    
+.orange
+    background-color: $orange
+    color: white     
+.green
+    background-color: $green
+    color: white       
+
+

@@ -1,0 +1,75 @@
+.crud
+    input            
+            border: 1px solid rgba(255, 168, 22, 0.72)
+            border-radius: 5px
+    button,#total
+            border-radius: 5px
+    .head
+        p
+            text-transform: capitalize
+            font-size: 2.5rem
+            margin-bottom: 2rem
+    .form
+        padding: 30px
+        background-color: #fff
+        border-radius: 10px
+        box-shadow: 0 0 30px rgb(17 17 17 / 8%)
+
+    .inputs
+        display: flex
+        flex-direction: column 
+        
+        .price     
+            display: flex 
+            align-items: flex-start                 
+            flex-wrap: wrap
+            margin-block: 2rem
+            input 
+                margin-right: 1.5rem
+            #total
+                background-color: $red
+                width: 20rem
+                height: 5rem
+                display: flex
+                align-items: center
+                padding: 2rem
+                color: white
+                margin-left: auto
+                transition: background-color .2s 
+                &::before
+                    content: 'Total: '
+        .counting
+            display: flex     
+            flex-wrap: wrap
+            input
+                margin-right: 1.5rem       
+            .btn
+                margin-left: auto
+
+    .outputs
+        .searchblock
+            display: flex
+            flex-direction: column
+
+            .btnSearch
+                display: flex
+                justify-content: space-between
+        table
+            margin-block: 2rem
+            text-align: center
+            border: 4px solid white
+            border-radius: .7rem
+
+            thead
+                tr
+                    th
+                        padding: 1.5rem
+            th
+                text-transform: uppercase
+            th,td
+                border: 2px solid rgba(255, 168, 22, 0.72)
+                border-radius: 2px                               
+            button
+                width: 10rem
+                padding-block: 1.5rem
+                margin-block: 1rem

@@ -1,0 +1,261 @@
+/* Varaibles */
+:root {
+  background-color: #F9F5EB;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5.4rem;
+  color: #ea5455;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4.5rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+/* Utilities */ 
+.form-control {
+  margin-bottom: 1rem;
+  height: 5.5rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0 30px rgba(17, 17, 17, 0.08);
+  outline: none;
+}
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.focus-effect, .form-control {
+  background-position: center center;
+  transition: 0.4s;
+}
+.focus-effect:focus, .form-control:focus {
+  background-color: rgba(255, 168, 22, 0.72);
+  caret-color: #FFF;
+  color: #FFF;
+}
+.focus-effect:focus::-webkit-input-placeholder, .form-control:focus::-webkit-input-placeholder {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.hover-effects, .btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem rgba(163, 163, 163, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 0.2s;
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+  min-height: 80rem;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.my-2 {
+  margin-block: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Buttons  */
+.btn {
+  text-decoration: none;
+  color: #1C3879;
+  border: 0.1rem solid #1C3879;
+  width: 20rem;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: none;
+  transition: all 0.4s;
+}
+.btn:disabled:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* COLOR */
+.blue {
+  background-color: #1C3879;
+  color: white;
+}
+
+.red {
+  background-color: #ea5455;
+  color: white;
+}
+
+.orange {
+  background-color: #D1512D;
+  color: white;
+}
+
+.green {
+  background-color: #7FB77E;
+  color: white;
+}
+
+.crud input {
+  border: 1px solid rgba(255, 168, 22, 0.72);
+  border-radius: 5px;
+}
+.crud button, .crud #total {
+  border-radius: 5px;
+}
+.crud .head p {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.crud .form {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(17, 17, 17, 0.08);
+}
+.crud .inputs {
+  display: flex;
+  flex-direction: column;
+}
+.crud .inputs .price {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-block: 2rem;
+}
+.crud .inputs .price input {
+  margin-right: 1.5rem;
+}
+.crud .inputs .price #total {
+  background-color: #ea5455;
+  width: 20rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  margin-left: auto;
+  transition: background-color 0.2s;
+}
+.crud .inputs .price #total::before {
+  content: "Total: ";
+}
+.crud .inputs .counting {
+  display: flex;
+  flex-wrap: wrap;
+}
+.crud .inputs .counting input {
+  margin-right: 1.5rem;
+}
+.crud .inputs .counting .btn {
+  margin-left: auto;
+}
+.crud .outputs .searchblock {
+  display: flex;
+  flex-direction: column;
+}
+.crud .outputs .searchblock .btnSearch {
+  display: flex;
+  justify-content: space-between;
+}
+.crud .outputs table {
+  margin-block: 2rem;
+  text-align: center;
+  border: 4px solid white;
+  border-radius: 0.7rem;
+}
+.crud .outputs table thead tr th {
+  padding: 1.5rem;
+}
+.crud .outputs table th {
+  text-transform: uppercase;
+}
+.crud .outputs table th, .crud .outputs table td {
+  border: 2px solid rgba(255, 168, 22, 0.72);
+  border-radius: 2px;
+}
+.crud .outputs table button {
+  width: 10rem;
+  padding-block: 1.5rem;
+  margin-block: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
